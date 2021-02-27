@@ -425,3 +425,24 @@
 2021-02-27 22:53:49 DEBUG HibernateMetadataProviderTest:72 - false
 2021-02-27 22:53:49 DEBUG HibernateMetadataProviderTest:74 - null
 2021-02-27 22:53:49 INFO  HibernateMetadataProviderTest:39 - GetByIdFail
+2021-02-28 00:49:31 INFO  HibernateMetadataProviderTest:136 - UpdateFail
+2021-02-28 00:49:36 INFO  HibernateMetadataProviderTest:117 - UpdateSuccess
+2021-02-28 00:49:36 DEBUG HibernateMetadataProviderTest:127 - entityTestEntity{id=2, name='NewName', description='It is the first entity', dateCreated=Thu Mar 18 00:00:00 MSK 3920, check=true, anotherEntity=null}
+2021-02-28 00:49:36 DEBUG HibernateMetadataProviderTest:128 - true
+2021-02-28 00:49:36 DEBUG HibernateMetadataProviderTest:130 - TestEntity{id=2, name='NewName', description='It is the first entity', dateCreated=3920-03-18, check=true, anotherEntity=null}
+2021-02-28 00:49:36 INFO  HibernateMetadataProviderTest:25 - save
+2021-02-28 00:49:36 DEBUG HibernateMetadataProviderTest:33 - TestEntity{id=3, name='Name1', description='It is the first entity', dateCreated=3920-03-18, check=true, anotherEntity=null}
+2021-02-28 00:49:36 INFO  HibernateMetadataProviderTest:46 - DeleteSuccess
+2021-02-28 00:49:36 DEBUG HibernateMetadataProviderTest:54 - TestEntity{id=4, name='Name1', description='It is the first entity', dateCreated=3920-03-18, check=true, anotherEntity=null}
+2021-02-28 00:49:36 DEBUG HibernateMetadataProviderTest:56 - true
+2021-02-28 00:49:36 DEBUG HibernateMetadataProviderTest:58 - null
+2021-02-28 00:49:36 INFO  HibernateMetadataProviderTest:169 - ReadFail
+2021-02-28 00:49:36 DEBUG HibernateMetadataProviderTest:172 - []
+2021-02-28 00:49:36 INFO  HibernateMetadataProviderTest:151 - ReadSuccess
+2021-02-28 00:49:36 DEBUG HibernateMetadataProviderTest:163 - [TestEntity{id=5, name='Name1', description='It is the first entity', dateCreated=3920-03-18, check=true, anotherEntity=null}]
+2021-02-28 00:49:36 INFO  HibernateMetadataProviderTest:64 - DeleteFail
+2021-02-28 00:49:36 DEBUG HibernateMetadataProviderTest:72 - false
+2021-02-28 00:49:36 DEBUG HibernateMetadataProviderTest:74 - null
+2021-02-28 00:49:36 INFO  HibernateMetadataProviderTest:39 - GetByIdFail
+2021-02-28 00:53:59 INFO  HibernateMetadataProviderTest:26 - save
+2021-02-28 00:54:03 DEBUG HibernateMetadataProviderTest:37 - TestEntity{id=1, name='Name1', description='It is the first entity', dateCreated=3920-03-18, check=true, anotherEntity=AnotherTestEntity{descriotion='Important illustration'}}

@@ -22,6 +22,8 @@ public class TestEntity implements Serializable {
     private Date dateCreated;
     @Column(name = "CHECK_")
     private Boolean check;
+    @Embedded
+    private AnotherTestEntity anotherEntity;
 
     public TestEntity() {
     }
@@ -66,17 +68,25 @@ public class TestEntity implements Serializable {
         this.check = check;
     }
 
+    public AnotherTestEntity getAnotherEntity() {
+        return anotherEntity;
+    }
+
+    public void setAnotherEntity(AnotherTestEntity anotherEntity) {
+        this.anotherEntity = anotherEntity;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         TestEntity that = (TestEntity) o;
-        return Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(description, that.description) && Objects.equals(dateCreated, that.dateCreated) && Objects.equals(check, that.check);
+        return Objects.equals(id, that.id) && Objects.equals(name, that.name) && Objects.equals(description, that.description) && Objects.equals(dateCreated, that.dateCreated) && Objects.equals(check, that.check) && Objects.equals(anotherEntity, that.anotherEntity);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, description, dateCreated, check);
+        return Objects.hash(id, name, description, dateCreated, check, anotherEntity);
     }
 
     @Override
@@ -87,6 +97,7 @@ public class TestEntity implements Serializable {
                 ", description='" + description + '\'' +
                 ", dateCreated=" + dateCreated +
                 ", check=" + check +
+                ", anotherEntity=" + anotherEntity +
                 '}';
     }
 }

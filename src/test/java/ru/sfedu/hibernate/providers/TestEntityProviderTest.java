@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
 import ru.sfedu.hibernate.Constants;
+import ru.sfedu.hibernate.lab2.model.AnotherTestEntity;
 import ru.sfedu.hibernate.lab2.model.TestEntity;
 import ru.sfedu.hibernate.lab2.providers.TestEntityProvider;
 
@@ -28,6 +29,9 @@ class TestEntityProviderTest {
         entity.setDescription("It is the first entity");
         entity.setDateCreated(new Date(2020,02,18));
         entity.setCheck(true);
+        AnotherTestEntity anotherTestEntity = new AnotherTestEntity();
+        anotherTestEntity.setDescriotion("Important illustration");
+        entity.setAnotherEntity(anotherTestEntity);
         Long result = instance.save(entity);
         Optional<TestEntity> entity1 = instance.getById(TestEntity.class, result);
         log.debug(entity1.get());
