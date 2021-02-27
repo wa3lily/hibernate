@@ -1,0 +1,427 @@
+2021-02-22 21:55:13 INFO  HibernateMetadataProviderTest:42 - DeleteSuccess
+2021-02-22 21:55:16 DEBUG HibernateMetadataProviderTest:49 - id = 1
+2021-02-22 21:55:17 DEBUG HibernateMetadataProviderTest:52 - false
+2021-02-22 21:55:17 DEBUG HibernateMetadataProviderTest:54 - TestEntity{id=1, name='Name1'}
+2021-02-22 21:56:59 INFO  HibernateMetadataProviderTest:42 - DeleteSuccess
+2021-02-22 21:57:02 DEBUG HibernateMetadataProviderTest:49 - id = 1
+2021-02-22 21:57:02 DEBUG HibernateMetadataProviderTest:52 - false
+2021-02-22 21:57:03 DEBUG HibernateMetadataProviderTest:54 - TestEntity{id=1, name='Name1'}
+2021-02-22 22:01:25 INFO  HibernateMetadataProviderTest:42 - DeleteSuccess
+2021-02-22 22:01:28 DEBUG HibernateMetadataProviderTest:49 - id = 1
+2021-02-22 22:01:28 DEBUG HibernateMetadataProviderTest:51 - TestEntity{id=1, name='Name1'}
+2021-02-22 22:01:28 DEBUG HibernateMetadataProviderTest:53 - false
+2021-02-22 22:01:28 DEBUG HibernateMetadataProviderTest:55 - TestEntity{id=1, name='Name1'}
+2021-02-22 22:35:12 INFO  HibernateMetadataProviderTest:61 - DeleteEntitySuccess
+2021-02-22 22:35:15 DEBUG HibernateMetadataProviderTest:68 - id = 1
+2021-02-22 22:35:15 DEBUG HibernateMetadataProviderTest:70 - TestEntity{id=1, name='Name1'}
+2021-02-22 22:35:15 DEBUG HibernateMetadataProviderTest:72 - true
+2021-02-22 22:35:15 DEBUG HibernateMetadataProviderTest:74 - null
+2021-02-22 22:42:19 INFO  HibernateMetadataProviderTest:42 - DeleteSuccess
+2021-02-22 22:42:23 DEBUG HibernateMetadataProviderTest:49 - id = 1
+2021-02-22 22:42:23 DEBUG HibernateMetadataProviderTest:51 - TestEntity{id=1, name='Name1'}
+2021-02-22 22:42:23 DEBUG HibernateMetadataProviderTest:53 - true
+2021-02-22 22:42:23 DEBUG HibernateMetadataProviderTest:55 - null
+2021-02-22 22:54:42 INFO  HibernateMetadataProviderTest:60 - DeleteFail
+2021-02-22 22:54:46 DEBUG HibernateMetadataProviderTest:68 - false
+2021-02-22 22:54:46 DEBUG HibernateMetadataProviderTest:70 - null
+2021-02-22 23:04:08 INFO  HibernateMetadataProviderTest:95 - DeleteEntityFail
+2021-02-22 23:08:39 INFO  HibernateMetadataProviderTest:95 - DeleteEntityFail
+2021-02-22 23:10:57 INFO  HibernateMetadataProviderTest:95 - DeleteEntityFail
+2021-02-22 23:13:29 INFO  HibernateMetadataProviderTest:95 - DeleteEntityFail
+2021-02-22 23:13:58 INFO  HibernateMetadataProviderTest:95 - DeleteEntityFail
+2021-02-22 23:18:57 INFO  HibernateMetadataProviderTest:95 - DeleteEntityFail
+2021-02-22 23:19:33 INFO  HibernateMetadataProviderTest:95 - DeleteEntityFail
+2021-02-23 00:50:09 INFO  HibernateMetadataProviderTest:95 - DeleteEntityFail
+2021-02-23 00:50:14 DEBUG TestEntityProvider:86 - There is not such entity: TestEntity{id=100, name='Name1'}
+2021-02-23 00:50:14 DEBUG HibernateMetadataProviderTest:103 - false
+2021-02-23 00:50:14 DEBUG HibernateMetadataProviderTest:105 - null
+2021-02-23 00:50:29 INFO  HibernateMetadataProviderTest:76 - DeleteEntitySuccess
+2021-02-23 00:50:32 DEBUG HibernateMetadataProviderTest:83 - id = 1
+2021-02-23 00:50:32 DEBUG HibernateMetadataProviderTest:85 - TestEntity{id=1, name='Name1'}
+2021-02-23 00:50:32 INFO  HibernateMetadataProviderTest:21 - save
+2021-02-23 00:50:33 INFO  HibernateMetadataProviderTest:42 - DeleteSuccess
+2021-02-23 00:50:33 INFO  HibernateMetadataProviderTest:60 - DeleteFail
+2021-02-23 00:50:33 INFO  HibernateMetadataProviderTest:95 - DeleteEntityFail
+2021-02-23 00:50:33 INFO  HibernateMetadataProviderTest:35 - GetByIdFail
+2021-02-23 00:55:24 INFO  HibernateMetadataProviderTest:79 - DeleteEntitySuccess
+2021-02-23 00:55:28 DEBUG HibernateMetadataProviderTest:87 - id = 1
+2021-02-23 00:55:28 DEBUG HibernateMetadataProviderTest:89 - TestEntity{id=1, name='Name1'}
+2021-02-23 00:55:28 INFO  HibernateMetadataProviderTest:20 - save
+2021-02-23 00:55:28 INFO  HibernateMetadataProviderTest:43 - DeleteSuccess
+2021-02-23 00:55:28 INFO  HibernateMetadataProviderTest:62 - DeleteFail
+2021-02-23 00:55:28 INFO  HibernateMetadataProviderTest:99 - DeleteEntityFail
+2021-02-23 00:55:28 INFO  HibernateMetadataProviderTest:35 - GetByIdFail
+2021-02-23 00:55:38 INFO  HibernateMetadataProviderTest:20 - save
+2021-02-23 00:55:42 DEBUG HibernateMetadataProviderTest:29 - TestEntity{id=1, name='Name1'}
+2021-02-23 00:59:40 INFO  HibernateMetadataProviderTest:79 - DeleteEntitySuccess
+2021-02-23 00:59:44 DEBUG HibernateMetadataProviderTest:87 - id = 1
+2021-02-23 00:59:44 DEBUG HibernateMetadataProviderTest:89 - TestEntity{id=1, name='Name1'}
+2021-02-23 00:59:44 INFO  HibernateMetadataProviderTest:20 - save
+2021-02-23 00:59:44 INFO  HibernateMetadataProviderTest:43 - DeleteSuccess
+2021-02-23 00:59:44 INFO  HibernateMetadataProviderTest:62 - DeleteFail
+2021-02-23 00:59:44 INFO  HibernateMetadataProviderTest:99 - DeleteEntityFail
+2021-02-23 00:59:44 INFO  HibernateMetadataProviderTest:35 - GetByIdFail
+2021-02-23 01:01:56 INFO  HibernateMetadataProviderTest:79 - DeleteEntitySuccess
+2021-02-23 01:01:59 DEBUG HibernateMetadataProviderTest:87 - id = 1
+2021-02-23 01:01:59 DEBUG HibernateMetadataProviderTest:89 - TestEntity{id=1, name='Name1'}
+2021-02-23 01:01:59 INFO  HibernateMetadataProviderTest:20 - save
+2021-02-23 01:01:59 DEBUG HibernateMetadataProviderTest:29 - TestEntity{id=2, name='Name1'}
+2021-02-23 01:01:59 INFO  HibernateMetadataProviderTest:43 - DeleteSuccess
+2021-02-23 01:01:59 DEBUG HibernateMetadataProviderTest:52 - TestEntity{id=3, name='Name1'}
+2021-02-23 01:01:59 DEBUG HibernateMetadataProviderTest:54 - true
+2021-02-23 01:01:59 DEBUG HibernateMetadataProviderTest:56 - null
+2021-02-23 01:01:59 INFO  HibernateMetadataProviderTest:62 - DeleteFail
+2021-02-23 01:01:59 DEBUG HibernateMetadataProviderTest:71 - false
+2021-02-23 01:01:59 DEBUG HibernateMetadataProviderTest:73 - null
+2021-02-23 01:01:59 INFO  HibernateMetadataProviderTest:99 - DeleteEntityFail
+2021-02-23 01:01:59 DEBUG TestEntityProvider:86 - There is not such entity: TestEntity{id=100, name='Name1'}
+2021-02-23 01:01:59 DEBUG HibernateMetadataProviderTest:108 - false
+2021-02-23 01:01:59 DEBUG HibernateMetadataProviderTest:110 - null
+2021-02-23 01:01:59 INFO  HibernateMetadataProviderTest:35 - GetByIdFail
+2021-02-23 01:03:03 INFO  HibernateMetadataProviderTest:79 - DeleteEntitySuccess
+2021-02-23 01:03:06 DEBUG HibernateMetadataProviderTest:87 - id = 1
+2021-02-23 01:03:06 DEBUG HibernateMetadataProviderTest:89 - TestEntity{id=1, name='Name2'}
+2021-02-23 01:09:45 INFO  HibernateMetadataProviderTest:79 - DeleteEntitySuccess
+2021-02-23 01:09:49 DEBUG HibernateMetadataProviderTest:87 - id = 1
+2021-02-23 01:09:49 DEBUG HibernateMetadataProviderTest:89 - TestEntity{id=1, name='Name2'}
+2021-02-23 01:14:18 INFO  HibernateMetadataProviderTest:79 - DeleteEntitySuccess
+2021-02-23 01:14:22 DEBUG HibernateMetadataProviderTest:87 - id = 1
+2021-02-23 01:14:22 DEBUG HibernateMetadataProviderTest:89 - TestEntity{id=1, name='Name4'}
+2021-02-23 01:56:06 INFO  HibernateMetadataProviderTest:79 - DeleteEntitySuccess
+2021-02-23 01:56:10 DEBUG HibernateMetadataProviderTest:87 - id = 1
+2021-02-23 01:56:10 DEBUG HibernateMetadataProviderTest:89 - TestEntity{id=1, name='Name4'}
+2021-02-23 01:57:31 INFO  HibernateMetadataProviderTest:79 - DeleteEntitySuccess
+2021-02-23 01:57:35 DEBUG HibernateMetadataProviderTest:87 - id = 1
+2021-02-23 01:57:35 DEBUG HibernateMetadataProviderTest:89 - TestEntity{id=1, name='Name4'}
+2021-02-23 01:58:48 INFO  HibernateMetadataProviderTest:79 - DeleteEntitySuccess
+2021-02-23 01:58:53 DEBUG HibernateMetadataProviderTest:87 - id = 1
+2021-02-23 01:58:53 DEBUG HibernateMetadataProviderTest:89 - TestEntity{id=1, name='Name4'}
+2021-02-23 02:57:23 INFO  HibernateMetadataProviderTest:79 - DeleteEntitySuccess
+2021-02-23 02:57:26 DEBUG HibernateMetadataProviderTest:87 - id = 1
+2021-02-23 02:57:26 DEBUG HibernateMetadataProviderTest:89 - TestEntity{id=1, name='Name4'}
+2021-02-23 02:58:51 INFO  HibernateMetadataProviderTest:79 - DeleteEntitySuccess
+2021-02-23 02:58:54 DEBUG HibernateMetadataProviderTest:87 - id = 1
+2021-02-23 02:58:55 DEBUG HibernateMetadataProviderTest:89 - TestEntity{id=1, name='Name4'}
+2021-02-23 03:00:35 INFO  HibernateMetadataProviderTest:79 - DeleteEntitySuccess
+2021-02-23 03:00:38 DEBUG HibernateMetadataProviderTest:87 - id = 1
+2021-02-23 03:00:38 DEBUG HibernateMetadataProviderTest:89 - TestEntity{id=1, name='Name4'}
+2021-02-23 03:01:50 INFO  HibernateMetadataProviderTest:79 - DeleteEntitySuccess
+2021-02-23 03:02:32 DEBUG HibernateMetadataProviderTest:87 - id = 1
+2021-02-23 03:02:40 DEBUG HibernateMetadataProviderTest:89 - TestEntity{id=1, name='Name4'}
+2021-02-23 03:03:38 INFO  HibernateMetadataProviderTest:79 - DeleteEntitySuccess
+2021-02-23 03:03:44 DEBUG HibernateMetadataProviderTest:87 - id = 1
+2021-02-23 03:04:04 DEBUG HibernateMetadataProviderTest:89 - TestEntity{id=1, name='Name4'}
+2021-02-24 18:04:51 INFO  HibernateMetadataProviderTest:20 - save
+2021-02-24 18:04:55 INFO  HibernateMetadataProviderTest:43 - DeleteSuccess
+2021-02-24 18:04:55 INFO  HibernateMetadataProviderTest:62 - DeleteFail
+2021-02-24 18:04:55 DEBUG HibernateMetadataProviderTest:71 - false
+2021-02-24 18:04:55 DEBUG HibernateMetadataProviderTest:73 - null
+2021-02-24 18:04:55 INFO  HibernateMetadataProviderTest:35 - GetByIdFail
+2021-02-24 18:05:29 INFO  HibernateMetadataProviderTest:20 - save
+2021-02-24 18:06:10 INFO  HibernateMetadataProviderTest:20 - save
+2021-02-24 18:06:14 DEBUG HibernateMetadataProviderTest:29 - TestEntity{id=1, name='Name1'}
+2021-02-24 18:06:25 INFO  HibernateMetadataProviderTest:20 - save
+2021-02-24 18:06:28 DEBUG HibernateMetadataProviderTest:29 - TestEntity{id=1, name='Name1'}
+2021-02-24 18:06:28 INFO  HibernateMetadataProviderTest:43 - DeleteSuccess
+2021-02-24 18:06:28 DEBUG HibernateMetadataProviderTest:52 - TestEntity{id=2, name='Name1'}
+2021-02-24 18:06:28 DEBUG HibernateMetadataProviderTest:54 - true
+2021-02-24 18:06:28 DEBUG HibernateMetadataProviderTest:56 - null
+2021-02-24 18:06:28 INFO  HibernateMetadataProviderTest:62 - DeleteFail
+2021-02-24 18:06:28 DEBUG HibernateMetadataProviderTest:71 - false
+2021-02-24 18:06:28 DEBUG HibernateMetadataProviderTest:73 - null
+2021-02-24 18:06:28 INFO  HibernateMetadataProviderTest:35 - GetByIdFail
+2021-02-24 21:54:03 INFO  HibernateMetadataProviderTest:116 - UpdateSuccess
+2021-02-24 21:54:08 DEBUG HibernateMetadataProviderTest:129 - TestEntity{id=1, name='Name1'}
+2021-02-24 21:55:37 INFO  HibernateMetadataProviderTest:116 - UpdateSuccess
+2021-02-24 21:55:42 DEBUG HibernateMetadataProviderTest:129 - TestEntity{id=1, name='Name1'}
+2021-02-24 21:55:54 INFO  HibernateMetadataProviderTest:116 - UpdateSuccess
+2021-02-24 21:56:50 INFO  HibernateMetadataProviderTest:116 - UpdateSuccess
+2021-02-24 21:56:54 DEBUG HibernateMetadataProviderTest:129 - TestEntity{id=1, name='NewName'}
+2021-02-24 22:38:41 INFO  HibernateMetadataProviderTest:135 - UpdateFail
+2021-02-24 22:55:42 INFO  HibernateMetadataProviderTest:135 - UpdateFail
+2021-02-24 23:35:17 INFO  HibernateMetadataProviderTest:135 - UpdateFail
+2021-02-24 23:35:21 DEBUG HibernateMetadataProviderTest:145 - null
+2021-02-24 23:35:48 INFO  HibernateMetadataProviderTest:135 - UpdateFail
+2021-02-24 23:35:51 DEBUG HibernateMetadataProviderTest:145 - null
+2021-02-24 23:35:51 INFO  HibernateMetadataProviderTest:116 - UpdateSuccess
+2021-02-24 23:35:52 DEBUG HibernateMetadataProviderTest:129 - TestEntity{id=1, name='Name1'}
+2021-02-24 23:35:52 INFO  HibernateMetadataProviderTest:20 - save
+2021-02-24 23:35:52 DEBUG HibernateMetadataProviderTest:29 - TestEntity{id=2, name='Name1'}
+2021-02-24 23:35:52 INFO  HibernateMetadataProviderTest:43 - DeleteSuccess
+2021-02-24 23:35:52 DEBUG HibernateMetadataProviderTest:52 - TestEntity{id=3, name='Name1'}
+2021-02-24 23:35:52 DEBUG HibernateMetadataProviderTest:54 - true
+2021-02-24 23:35:52 DEBUG HibernateMetadataProviderTest:56 - null
+2021-02-24 23:35:52 INFO  HibernateMetadataProviderTest:62 - DeleteFail
+2021-02-24 23:35:52 DEBUG HibernateMetadataProviderTest:71 - false
+2021-02-24 23:35:52 DEBUG HibernateMetadataProviderTest:73 - null
+2021-02-24 23:35:52 INFO  HibernateMetadataProviderTest:35 - GetByIdFail
+2021-02-24 23:37:43 INFO  HibernateMetadataProviderTest:135 - UpdateFail
+2021-02-24 23:37:47 ERROR TestEntityProvider:58 - java.lang.NullPointerException
+2021-02-24 23:37:47 DEBUG TestEntityProvider:59 - There is not TestEntity{id=101, name='Name1'}
+2021-02-24 23:37:48 DEBUG HibernateMetadataProviderTest:145 - null
+2021-02-24 23:37:48 INFO  HibernateMetadataProviderTest:116 - UpdateSuccess
+2021-02-24 23:37:48 DEBUG HibernateMetadataProviderTest:129 - TestEntity{id=1, name='Name1'}
+2021-02-24 23:37:48 INFO  HibernateMetadataProviderTest:20 - save
+2021-02-24 23:37:48 DEBUG HibernateMetadataProviderTest:29 - TestEntity{id=2, name='Name1'}
+2021-02-24 23:37:48 INFO  HibernateMetadataProviderTest:43 - DeleteSuccess
+2021-02-24 23:37:48 DEBUG HibernateMetadataProviderTest:52 - TestEntity{id=3, name='Name1'}
+2021-02-24 23:37:48 DEBUG HibernateMetadataProviderTest:54 - true
+2021-02-24 23:37:48 DEBUG HibernateMetadataProviderTest:56 - null
+2021-02-24 23:37:48 INFO  HibernateMetadataProviderTest:62 - DeleteFail
+2021-02-24 23:37:48 DEBUG HibernateMetadataProviderTest:71 - false
+2021-02-24 23:37:48 DEBUG HibernateMetadataProviderTest:73 - null
+2021-02-24 23:37:48 INFO  HibernateMetadataProviderTest:35 - GetByIdFail
+2021-02-24 23:38:46 INFO  HibernateMetadataProviderTest:135 - UpdateFail
+2021-02-24 23:39:08 INFO  HibernateMetadataProviderTest:135 - UpdateFail
+2021-02-24 23:39:12 ERROR TestEntityProvider:58 - java.lang.NullPointerException
+2021-02-24 23:39:12 DEBUG TestEntityProvider:59 - There is not TestEntity{id=101, name='Name1'}
+2021-02-24 23:39:12 DEBUG HibernateMetadataProviderTest:145 - null
+2021-02-24 23:39:53 INFO  HibernateMetadataProviderTest:116 - UpdateSuccess
+2021-02-24 23:39:57 DEBUG HibernateMetadataProviderTest:129 - TestEntity{id=1, name='Name1'}
+2021-02-24 23:41:30 INFO  HibernateMetadataProviderTest:116 - UpdateSuccess
+2021-02-24 23:41:34 DEBUG HibernateMetadataProviderTest:129 - TestEntity{id=1, name='Name1'}
+2021-02-24 23:42:59 INFO  HibernateMetadataProviderTest:116 - UpdateSuccess
+2021-02-24 23:43:03 DEBUG HibernateMetadataProviderTest:127 - false
+2021-02-24 23:43:03 DEBUG HibernateMetadataProviderTest:129 - TestEntity{id=1, name='Name1'}
+2021-02-24 23:45:07 INFO  HibernateMetadataProviderTest:135 - UpdateFail
+2021-02-24 23:45:11 ERROR TestEntityProvider:59 - java.lang.NullPointerException
+2021-02-24 23:45:11 DEBUG TestEntityProvider:60 - There is not TestEntity{id=101, name='Name1'}
+2021-02-24 23:45:11 DEBUG HibernateMetadataProviderTest:145 - null
+2021-02-24 23:45:11 INFO  HibernateMetadataProviderTest:116 - UpdateSuccess
+2021-02-24 23:45:11 DEBUG HibernateMetadataProviderTest:127 - false
+2021-02-24 23:45:11 DEBUG HibernateMetadataProviderTest:129 - TestEntity{id=1, name='Name1'}
+2021-02-24 23:45:11 INFO  HibernateMetadataProviderTest:20 - save
+2021-02-24 23:45:11 DEBUG HibernateMetadataProviderTest:29 - TestEntity{id=2, name='Name1'}
+2021-02-24 23:45:11 INFO  HibernateMetadataProviderTest:43 - DeleteSuccess
+2021-02-24 23:45:11 DEBUG HibernateMetadataProviderTest:52 - TestEntity{id=3, name='Name1'}
+2021-02-24 23:45:11 DEBUG HibernateMetadataProviderTest:54 - true
+2021-02-24 23:45:11 DEBUG HibernateMetadataProviderTest:56 - null
+2021-02-24 23:45:11 INFO  HibernateMetadataProviderTest:62 - DeleteFail
+2021-02-24 23:45:11 DEBUG HibernateMetadataProviderTest:71 - false
+2021-02-24 23:45:11 DEBUG HibernateMetadataProviderTest:73 - null
+2021-02-24 23:45:11 INFO  HibernateMetadataProviderTest:35 - GetByIdFail
+2021-02-24 23:46:53 INFO  HibernateMetadataProviderTest:116 - UpdateSuccess
+2021-02-24 23:46:58 DEBUG HibernateMetadataProviderTest:127 - entityTestEntity{id=1, name='NewName'}
+2021-02-24 23:46:58 DEBUG HibernateMetadataProviderTest:128 - false
+2021-02-24 23:46:58 DEBUG HibernateMetadataProviderTest:130 - TestEntity{id=1, name='Name1'}
+2021-02-24 23:48:52 INFO  HibernateMetadataProviderTest:116 - UpdateSuccess
+2021-02-24 23:48:55 DEBUG HibernateMetadataProviderTest:127 - entityTestEntity{id=1, name='NewName'}
+2021-02-24 23:48:55 DEBUG TestEntityProvider:56 - Before update 
+2021-02-24 23:48:55 DEBUG HibernateMetadataProviderTest:128 - false
+2021-02-24 23:48:55 DEBUG HibernateMetadataProviderTest:130 - TestEntity{id=1, name='Name1'}
+2021-02-26 00:14:04 INFO  HibernateMetadataProviderTest:116 - UpdateSuccess
+2021-02-26 00:14:09 DEBUG HibernateMetadataProviderTest:127 - entityTestEntity{id=1, name='NewName'}
+2021-02-26 00:14:09 DEBUG TestEntityProvider:56 - Before update 
+2021-02-26 00:14:09 DEBUG HibernateMetadataProviderTest:128 - false
+2021-02-26 00:14:09 DEBUG HibernateMetadataProviderTest:130 - TestEntity{id=1, name='Name1'}
+2021-02-26 23:38:05 INFO  HibernateMetadataProviderTest:116 - UpdateSuccess
+2021-02-26 23:38:09 DEBUG HibernateMetadataProviderTest:127 - entityTestEntity{id=1, name='NewName'}
+2021-02-26 23:38:09 DEBUG HibernateMetadataProviderTest:128 - true
+2021-02-26 23:38:09 DEBUG HibernateMetadataProviderTest:130 - TestEntity{id=1, name='NewName'}
+2021-02-26 23:43:49 INFO  HibernateMetadataProviderTest:137 - UpdateFail
+2021-02-26 23:46:57 INFO  HibernateMetadataProviderTest:137 - UpdateFail
+2021-02-26 23:57:46 INFO  HibernateMetadataProviderTest:137 - UpdateFail
+2021-02-27 16:24:18 INFO  HibernateMetadataProviderTest:136 - UpdateFail
+2021-02-27 16:24:40 INFO  HibernateMetadataProviderTest:116 - UpdateSuccess
+2021-02-27 16:24:44 DEBUG HibernateMetadataProviderTest:127 - entityTestEntity{id=1, name='NewName'}
+2021-02-27 16:24:44 DEBUG HibernateMetadataProviderTest:128 - true
+2021-02-27 16:24:44 DEBUG HibernateMetadataProviderTest:130 - TestEntity{id=1, name='NewName'}
+2021-02-27 16:27:11 INFO  HibernateMetadataProviderTest:136 - UpdateFail
+2021-02-27 16:27:32 INFO  HibernateMetadataProviderTest:136 - UpdateFail
+2021-02-27 16:27:35 INFO  HibernateMetadataProviderTest:116 - UpdateSuccess
+2021-02-27 16:27:35 DEBUG HibernateMetadataProviderTest:127 - entityTestEntity{id=2, name='NewName'}
+2021-02-27 16:27:35 DEBUG HibernateMetadataProviderTest:128 - true
+2021-02-27 16:27:35 DEBUG HibernateMetadataProviderTest:130 - TestEntity{id=2, name='NewName'}
+2021-02-27 16:27:35 INFO  HibernateMetadataProviderTest:20 - save
+2021-02-27 16:27:35 DEBUG HibernateMetadataProviderTest:29 - TestEntity{id=3, name='Name1'}
+2021-02-27 16:27:35 INFO  HibernateMetadataProviderTest:43 - DeleteSuccess
+2021-02-27 16:27:35 DEBUG HibernateMetadataProviderTest:52 - TestEntity{id=4, name='Name1'}
+2021-02-27 16:27:35 DEBUG HibernateMetadataProviderTest:54 - true
+2021-02-27 16:27:35 DEBUG HibernateMetadataProviderTest:56 - null
+2021-02-27 16:27:35 INFO  HibernateMetadataProviderTest:62 - DeleteFail
+2021-02-27 16:27:35 DEBUG HibernateMetadataProviderTest:71 - false
+2021-02-27 16:27:35 DEBUG HibernateMetadataProviderTest:73 - null
+2021-02-27 16:27:35 INFO  HibernateMetadataProviderTest:35 - GetByIdFail
+2021-02-27 16:47:17 INFO  HibernateMetadataProviderTest:154 - ReadSuccess
+2021-02-27 16:51:15 INFO  HibernateMetadataProviderTest:154 - ReadSuccess
+2021-02-27 16:53:44 INFO  HibernateMetadataProviderTest:154 - ReadSuccess
+2021-02-27 16:55:13 INFO  HibernateMetadataProviderTest:155 - ReadSuccess
+2021-02-27 16:55:43 INFO  HibernateMetadataProviderTest:155 - ReadSuccess
+2021-02-27 16:55:43 DEBUG HibernateMetadataProviderTest:156 - from "class ru.sfedu.hibernate.lab2.model.TestEntity"
+2021-02-27 16:56:35 INFO  HibernateMetadataProviderTest:155 - ReadSuccess
+2021-02-27 16:56:35 DEBUG HibernateMetadataProviderTest:156 - from "class ru.sfedu.hibernate.lab2.model.TestEntity"
+2021-02-27 17:01:32 INFO  HibernateMetadataProviderTest:155 - ReadSuccess
+2021-02-27 17:01:32 DEBUG HibernateMetadataProviderTest:156 - from class ru.sfedu.hibernate.lab2.model.TestEntity
+2021-02-27 17:10:52 INFO  HibernateMetadataProviderTest:155 - ReadSuccess
+2021-02-27 17:10:52 DEBUG HibernateMetadataProviderTest:156 - from class ru.sfedu.hibernate.lab2.model.TestEntity
+2021-02-27 17:27:40 INFO  HibernateMetadataProviderTest:155 - ReadSuccess
+2021-02-27 17:27:40 DEBUG HibernateMetadataProviderTest:156 - from class ru.sfedu.hibernate.lab2.model.TestEntity
+2021-02-27 17:27:44 DEBUG HibernateMetadataProviderTest:168 - null
+2021-02-27 17:34:48 INFO  HibernateMetadataProviderTest:155 - ReadSuccess
+2021-02-27 17:34:48 DEBUG HibernateMetadataProviderTest:156 - from class ru.sfedu.hibernate.lab2.model.TestEntity
+2021-02-27 17:34:52 DEBUG HibernateMetadataProviderTest:168 - [TestEntity{id=1, name='Name1'}]
+2021-02-27 17:37:41 INFO  HibernateMetadataProviderTest:155 - ReadSuccess
+2021-02-27 17:37:41 DEBUG HibernateMetadataProviderTest:156 - from TestEntity
+2021-02-27 17:37:46 DEBUG HibernateMetadataProviderTest:168 - [TestEntity{id=1, name='Name1'}]
+2021-02-27 17:41:01 INFO  HibernateMetadataProviderTest:173 - ReadFail
+2021-02-27 17:41:05 DEBUG HibernateMetadataProviderTest:176 - []
+2021-02-27 17:45:44 INFO  HibernateMetadataProviderTest:173 - ReadFail
+2021-02-27 17:45:48 DEBUG HibernateMetadataProviderTest:177 - []
+2021-02-27 21:00:29 INFO  HibernateMetadataProviderTest:173 - ReadFail
+2021-02-27 21:00:34 DEBUG HibernateMetadataProviderTest:176 - []
+2021-02-27 21:02:10 INFO  HibernateMetadataProviderTest:139 - UpdateFail
+2021-02-27 21:02:14 INFO  HibernateMetadataProviderTest:119 - UpdateSuccess
+2021-02-27 21:02:14 DEBUG HibernateMetadataProviderTest:130 - entityTestEntity{id=2, name='NewName'}
+2021-02-27 21:02:14 DEBUG HibernateMetadataProviderTest:131 - true
+2021-02-27 21:02:14 DEBUG HibernateMetadataProviderTest:133 - TestEntity{id=2, name='NewName'}
+2021-02-27 21:02:14 INFO  HibernateMetadataProviderTest:23 - save
+2021-02-27 21:02:14 DEBUG HibernateMetadataProviderTest:32 - TestEntity{id=3, name='Name1'}
+2021-02-27 21:02:14 INFO  HibernateMetadataProviderTest:46 - DeleteSuccess
+2021-02-27 21:02:14 DEBUG HibernateMetadataProviderTest:55 - TestEntity{id=4, name='Name1'}
+2021-02-27 21:02:14 DEBUG HibernateMetadataProviderTest:57 - true
+2021-02-27 21:02:14 DEBUG HibernateMetadataProviderTest:59 - null
+2021-02-27 21:02:14 INFO  HibernateMetadataProviderTest:173 - ReadFail
+2021-02-27 21:02:14 DEBUG HibernateMetadataProviderTest:176 - [TestEntity{id=1, name='Name1'}, TestEntity{id=2, name='NewName'}, TestEntity{id=3, name='Name1'}]
+2021-02-27 21:02:14 INFO  HibernateMetadataProviderTest:155 - ReadSuccess
+2021-02-27 21:02:14 DEBUG HibernateMetadataProviderTest:167 - [TestEntity{id=1, name='Name1'}, TestEntity{id=2, name='NewName'}, TestEntity{id=3, name='Name1'}, TestEntity{id=5, name='Name1'}]
+2021-02-27 21:02:14 INFO  HibernateMetadataProviderTest:65 - DeleteFail
+2021-02-27 21:02:14 DEBUG HibernateMetadataProviderTest:74 - false
+2021-02-27 21:02:14 DEBUG HibernateMetadataProviderTest:76 - null
+2021-02-27 21:02:14 INFO  HibernateMetadataProviderTest:38 - GetByIdFail
+2021-02-27 21:15:45 INFO  HibernateMetadataProviderTest:135 - UpdateFail
+2021-02-27 21:15:48 INFO  HibernateMetadataProviderTest:116 - UpdateSuccess
+2021-02-27 21:15:48 DEBUG HibernateMetadataProviderTest:126 - entityTestEntity{id=2, name='NewName'}
+2021-02-27 21:15:48 DEBUG HibernateMetadataProviderTest:127 - true
+2021-02-27 21:15:48 DEBUG HibernateMetadataProviderTest:129 - TestEntity{id=2, name='NewName'}
+2021-02-27 21:15:48 INFO  HibernateMetadataProviderTest:24 - save
+2021-02-27 21:15:48 DEBUG HibernateMetadataProviderTest:32 - TestEntity{id=3, name='Name1'}
+2021-02-27 21:15:48 INFO  HibernateMetadataProviderTest:45 - DeleteSuccess
+2021-02-27 21:15:48 DEBUG HibernateMetadataProviderTest:53 - TestEntity{id=4, name='Name1'}
+2021-02-27 21:15:48 DEBUG HibernateMetadataProviderTest:55 - true
+2021-02-27 21:15:48 DEBUG HibernateMetadataProviderTest:57 - null
+2021-02-27 21:15:48 INFO  HibernateMetadataProviderTest:168 - ReadFail
+2021-02-27 21:15:49 INFO  HibernateMetadataProviderTest:150 - ReadSuccess
+2021-02-27 21:15:49 INFO  HibernateMetadataProviderTest:63 - DeleteFail
+2021-02-27 21:15:49 DEBUG HibernateMetadataProviderTest:71 - false
+2021-02-27 21:15:49 DEBUG HibernateMetadataProviderTest:73 - null
+2021-02-27 21:15:49 INFO  HibernateMetadataProviderTest:38 - GetByIdFail
+2021-02-27 21:18:57 INFO  HibernateMetadataProviderTest:150 - ReadSuccess
+2021-02-27 21:19:01 DEBUG HibernateMetadataProviderTest:162 - [TestEntity{id=1, name='Name1'}]
+2021-02-27 21:19:14 INFO  HibernateMetadataProviderTest:135 - UpdateFail
+2021-02-27 21:19:18 INFO  HibernateMetadataProviderTest:116 - UpdateSuccess
+2021-02-27 21:19:18 DEBUG HibernateMetadataProviderTest:126 - entityTestEntity{id=2, name='NewName'}
+2021-02-27 21:19:18 DEBUG HibernateMetadataProviderTest:127 - true
+2021-02-27 21:19:18 DEBUG HibernateMetadataProviderTest:129 - TestEntity{id=2, name='NewName'}
+2021-02-27 21:19:18 INFO  HibernateMetadataProviderTest:24 - save
+2021-02-27 21:19:18 DEBUG HibernateMetadataProviderTest:32 - TestEntity{id=3, name='Name1'}
+2021-02-27 21:19:18 INFO  HibernateMetadataProviderTest:45 - DeleteSuccess
+2021-02-27 21:19:18 DEBUG HibernateMetadataProviderTest:53 - TestEntity{id=4, name='Name1'}
+2021-02-27 21:19:18 DEBUG HibernateMetadataProviderTest:55 - true
+2021-02-27 21:19:18 DEBUG HibernateMetadataProviderTest:57 - null
+2021-02-27 21:19:18 INFO  HibernateMetadataProviderTest:168 - ReadFail
+2021-02-27 21:19:18 DEBUG HibernateMetadataProviderTest:171 - [TestEntity{id=1, name='Name1'}, TestEntity{id=2, name='NewName'}, TestEntity{id=3, name='Name1'}]
+2021-02-27 21:19:18 INFO  HibernateMetadataProviderTest:150 - ReadSuccess
+2021-02-27 21:19:18 DEBUG HibernateMetadataProviderTest:162 - [TestEntity{id=1, name='Name1'}, TestEntity{id=2, name='NewName'}, TestEntity{id=3, name='Name1'}, TestEntity{id=5, name='Name1'}]
+2021-02-27 21:19:18 INFO  HibernateMetadataProviderTest:63 - DeleteFail
+2021-02-27 21:19:18 DEBUG HibernateMetadataProviderTest:71 - false
+2021-02-27 21:19:18 DEBUG HibernateMetadataProviderTest:73 - null
+2021-02-27 21:19:18 INFO  HibernateMetadataProviderTest:38 - GetByIdFail
+2021-02-27 22:03:53 INFO  HibernateMetadataProviderTest:135 - UpdateFail
+2021-02-27 22:03:58 INFO  HibernateMetadataProviderTest:116 - UpdateSuccess
+2021-02-27 22:03:58 DEBUG HibernateMetadataProviderTest:126 - entityTestEntity{id=2, name='NewName'}
+2021-02-27 22:03:58 DEBUG HibernateMetadataProviderTest:127 - true
+2021-02-27 22:03:58 DEBUG HibernateMetadataProviderTest:129 - TestEntity{id=2, name='NewName'}
+2021-02-27 22:03:58 INFO  HibernateMetadataProviderTest:24 - save
+2021-02-27 22:03:58 DEBUG HibernateMetadataProviderTest:32 - TestEntity{id=3, name='Name1'}
+2021-02-27 22:03:58 INFO  HibernateMetadataProviderTest:45 - DeleteSuccess
+2021-02-27 22:03:58 DEBUG HibernateMetadataProviderTest:53 - TestEntity{id=4, name='Name1'}
+2021-02-27 22:03:58 DEBUG HibernateMetadataProviderTest:55 - true
+2021-02-27 22:03:58 DEBUG HibernateMetadataProviderTest:57 - null
+2021-02-27 22:03:58 INFO  HibernateMetadataProviderTest:168 - ReadFail
+2021-02-27 22:03:58 DEBUG HibernateMetadataProviderTest:171 - []
+2021-02-27 22:03:58 INFO  HibernateMetadataProviderTest:150 - ReadSuccess
+2021-02-27 22:03:58 DEBUG HibernateMetadataProviderTest:162 - [TestEntity{id=5, name='Name1'}]
+2021-02-27 22:03:58 INFO  HibernateMetadataProviderTest:63 - DeleteFail
+2021-02-27 22:03:58 DEBUG HibernateMetadataProviderTest:71 - false
+2021-02-27 22:03:58 DEBUG HibernateMetadataProviderTest:73 - null
+2021-02-27 22:03:58 INFO  HibernateMetadataProviderTest:38 - GetByIdFail
+2021-02-27 22:24:12 INFO  HibernateMetadataProviderTest:136 - UpdateFail
+2021-02-27 22:24:16 INFO  HibernateMetadataProviderTest:117 - UpdateSuccess
+2021-02-27 22:24:16 INFO  HibernateMetadataProviderTest:25 - save
+2021-02-27 22:24:16 INFO  HibernateMetadataProviderTest:46 - DeleteSuccess
+2021-02-27 22:24:16 INFO  HibernateMetadataProviderTest:169 - ReadFail
+2021-02-27 22:24:16 INFO  HibernateMetadataProviderTest:151 - ReadSuccess
+2021-02-27 22:24:16 INFO  HibernateMetadataProviderTest:64 - DeleteFail
+2021-02-27 22:24:16 DEBUG HibernateMetadataProviderTest:72 - false
+2021-02-27 22:24:16 INFO  HibernateMetadataProviderTest:39 - GetByIdFail
+2021-02-27 22:32:24 INFO  HibernateMetadataProviderTest:136 - UpdateFail
+2021-02-27 22:32:27 INFO  HibernateMetadataProviderTest:117 - UpdateSuccess
+2021-02-27 22:32:27 INFO  HibernateMetadataProviderTest:25 - save
+2021-02-27 22:32:27 INFO  HibernateMetadataProviderTest:46 - DeleteSuccess
+2021-02-27 22:32:27 INFO  HibernateMetadataProviderTest:169 - ReadFail
+2021-02-27 22:32:28 INFO  HibernateMetadataProviderTest:151 - ReadSuccess
+2021-02-27 22:32:28 INFO  HibernateMetadataProviderTest:64 - DeleteFail
+2021-02-27 22:32:28 DEBUG HibernateMetadataProviderTest:72 - false
+2021-02-27 22:32:28 INFO  HibernateMetadataProviderTest:39 - GetByIdFail
+2021-02-27 22:34:23 INFO  HibernateMetadataProviderTest:25 - save
+2021-02-27 22:36:07 INFO  HibernateMetadataProviderTest:136 - UpdateFail
+2021-02-27 22:36:11 INFO  HibernateMetadataProviderTest:117 - UpdateSuccess
+2021-02-27 22:36:11 INFO  HibernateMetadataProviderTest:25 - save
+2021-02-27 22:36:11 INFO  HibernateMetadataProviderTest:46 - DeleteSuccess
+2021-02-27 22:36:11 INFO  HibernateMetadataProviderTest:169 - ReadFail
+2021-02-27 22:36:12 INFO  HibernateMetadataProviderTest:151 - ReadSuccess
+2021-02-27 22:36:12 INFO  HibernateMetadataProviderTest:64 - DeleteFail
+2021-02-27 22:36:12 DEBUG HibernateMetadataProviderTest:72 - false
+2021-02-27 22:36:12 INFO  HibernateMetadataProviderTest:39 - GetByIdFail
+2021-02-27 22:48:58 INFO  HibernateMetadataProviderTest:136 - UpdateFail
+2021-02-27 22:49:01 INFO  HibernateMetadataProviderTest:117 - UpdateSuccess
+2021-02-27 22:49:01 INFO  HibernateMetadataProviderTest:25 - save
+2021-02-27 22:49:01 DEBUG HibernateMetadataProviderTest:33 - ru.sfedu.hibernate.lab2.model.TestEntity@1304e0d7
+2021-02-27 22:49:01 INFO  HibernateMetadataProviderTest:46 - DeleteSuccess
+2021-02-27 22:49:01 DEBUG HibernateMetadataProviderTest:54 - ru.sfedu.hibernate.lab2.model.TestEntity@71789580
+2021-02-27 22:49:01 INFO  HibernateMetadataProviderTest:169 - ReadFail
+2021-02-27 22:49:02 DEBUG HibernateMetadataProviderTest:172 - []
+2021-02-27 22:49:02 INFO  HibernateMetadataProviderTest:151 - ReadSuccess
+2021-02-27 22:49:02 DEBUG HibernateMetadataProviderTest:163 - [ru.sfedu.hibernate.lab2.model.TestEntity@7e94e331]
+2021-02-27 22:49:02 INFO  HibernateMetadataProviderTest:64 - DeleteFail
+2021-02-27 22:49:02 DEBUG HibernateMetadataProviderTest:72 - false
+2021-02-27 22:49:02 DEBUG HibernateMetadataProviderTest:74 - null
+2021-02-27 22:49:02 INFO  HibernateMetadataProviderTest:39 - GetByIdFail
+2021-02-27 22:52:50 INFO  HibernateMetadataProviderTest:136 - UpdateFail
+2021-02-27 22:52:54 INFO  HibernateMetadataProviderTest:117 - UpdateSuccess
+2021-02-27 22:52:54 DEBUG HibernateMetadataProviderTest:127 - entityTestEntity{id=2, name='NewName', description='It is the first entity', dateCreated=Thu Mar 18 00:00:00 MSK 3920, check=true}
+2021-02-27 22:52:54 DEBUG HibernateMetadataProviderTest:128 - true
+2021-02-27 22:52:54 DEBUG HibernateMetadataProviderTest:130 - TestEntity{id=2, name='NewName', description='It is the first entity', dateCreated=3920-03-18, check=true}
+2021-02-27 22:52:54 INFO  HibernateMetadataProviderTest:25 - save
+2021-02-27 22:52:54 DEBUG HibernateMetadataProviderTest:33 - TestEntity{id=3, name='Name1', description='It is the first entity', dateCreated=3920-03-18, check=true}
+2021-02-27 22:52:54 INFO  HibernateMetadataProviderTest:46 - DeleteSuccess
+2021-02-27 22:52:54 DEBUG HibernateMetadataProviderTest:54 - TestEntity{id=4, name='Name1', description='It is the first entity', dateCreated=3920-03-18, check=true}
+2021-02-27 22:52:54 DEBUG HibernateMetadataProviderTest:56 - true
+2021-02-27 22:52:54 DEBUG HibernateMetadataProviderTest:58 - null
+2021-02-27 22:52:54 INFO  HibernateMetadataProviderTest:169 - ReadFail
+2021-02-27 22:52:55 DEBUG HibernateMetadataProviderTest:172 - []
+2021-02-27 22:52:55 INFO  HibernateMetadataProviderTest:151 - ReadSuccess
+2021-02-27 22:52:55 DEBUG HibernateMetadataProviderTest:163 - [TestEntity{id=5, name='Name1', description='It is the first entity', dateCreated=3920-03-18, check=true}]
+2021-02-27 22:52:55 INFO  HibernateMetadataProviderTest:64 - DeleteFail
+2021-02-27 22:52:55 DEBUG HibernateMetadataProviderTest:72 - false
+2021-02-27 22:52:55 DEBUG HibernateMetadataProviderTest:74 - null
+2021-02-27 22:52:55 INFO  HibernateMetadataProviderTest:39 - GetByIdFail
+2021-02-27 22:53:44 INFO  HibernateMetadataProviderTest:136 - UpdateFail
+2021-02-27 22:53:48 INFO  HibernateMetadataProviderTest:117 - UpdateSuccess
+2021-02-27 22:53:48 DEBUG HibernateMetadataProviderTest:127 - entityTestEntity{id=2, name='NewName', description='It is the first entity', dateCreated=Thu Mar 18 00:00:00 MSK 3920, check=true}
+2021-02-27 22:53:48 DEBUG HibernateMetadataProviderTest:128 - true
+2021-02-27 22:53:48 DEBUG HibernateMetadataProviderTest:130 - TestEntity{id=2, name='NewName', description='It is the first entity', dateCreated=3920-03-18, check=true}
+2021-02-27 22:53:48 INFO  HibernateMetadataProviderTest:25 - save
+2021-02-27 22:53:48 DEBUG HibernateMetadataProviderTest:33 - TestEntity{id=3, name='Name1', description='It is the first entity', dateCreated=3920-03-18, check=true}
+2021-02-27 22:53:48 INFO  HibernateMetadataProviderTest:46 - DeleteSuccess
+2021-02-27 22:53:48 DEBUG HibernateMetadataProviderTest:54 - TestEntity{id=4, name='Name1', description='It is the first entity', dateCreated=3920-03-18, check=true}
+2021-02-27 22:53:48 DEBUG HibernateMetadataProviderTest:56 - true
+2021-02-27 22:53:48 DEBUG HibernateMetadataProviderTest:58 - null
+2021-02-27 22:53:48 INFO  HibernateMetadataProviderTest:169 - ReadFail
+2021-02-27 22:53:49 DEBUG HibernateMetadataProviderTest:172 - []
+2021-02-27 22:53:49 INFO  HibernateMetadataProviderTest:151 - ReadSuccess
+2021-02-27 22:53:49 DEBUG HibernateMetadataProviderTest:163 - [TestEntity{id=5, name='Name1', description='It is the first entity', dateCreated=3920-03-18, check=true}]
+2021-02-27 22:53:49 INFO  HibernateMetadataProviderTest:64 - DeleteFail
+2021-02-27 22:53:49 DEBUG HibernateMetadataProviderTest:72 - false
+2021-02-27 22:53:49 DEBUG HibernateMetadataProviderTest:74 - null
+2021-02-27 22:53:49 INFO  HibernateMetadataProviderTest:39 - GetByIdFail
