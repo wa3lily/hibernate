@@ -21,5 +21,13 @@
         <property name="show_sql">true</property>
         <property name="hbm2ddl.auto">create</property>
         <mapping class="ru.sfedu.hibernate.lab2.model.TestEntity"/>
+
+        <mapping class="ru.sfedu.hibernate.lab3.MappedSuperclass.model.Employee"/>
+        <mapping class="ru.sfedu.hibernate.lab3.MappedSuperclass.model.Author"/>
+        <mapping class="ru.sfedu.hibernate.lab3.MappedSuperclass.model.People"/>
+        <mapping class="ru.sfedu.hibernate.lab3.TablePerClass.model.Employee"/>
+        <mapping class="ru.sfedu.hibernate.lab3.TablePerClass.model.Author"/>
+        <mapping class="ru.sfedu.hibernate.lab3.TablePerClass.model.People"/>
+        <mapping class="ru.sfedu.hibernate.lab3.JoinedTable.model.People"/>
     </session-factory>
 </hibernate-configuration>

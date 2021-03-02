@@ -8,6 +8,7 @@ import org.hibernate.internal.util.config.ConfigurationException;
 import org.hibernate.service.ServiceRegistry;
 import ru.sfedu.hibernate.Constants;
 import ru.sfedu.hibernate.lab2.model.TestEntity;
+import ru.sfedu.hibernate.lab3.MappedSuperclass.model.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -43,6 +44,17 @@ public class HibernateUtil {
 
     public static void addEntities(MetadataSources metadataSources ) {
         metadataSources.addAnnotatedClass(TestEntity.class);
+        metadataSources.addAnnotatedClass(Author.class);
+        metadataSources.addAnnotatedClass(Employee.class);
+        metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab3.TablePerClass.model.Author.class);
+        metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab3.TablePerClass.model.Employee.class);
+        metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab3.TablePerClass.model.People.class);
+        metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab3.SingleTable.model.Author.class);
+        metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab3.SingleTable.model.Employee.class);
+        metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab3.SingleTable.model.People.class);
+        metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab3.JoinedTable.model.Author.class);
+        metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab3.JoinedTable.model.Employee.class);
+        metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab3.JoinedTable.model.People.class);
     }
 }
 
