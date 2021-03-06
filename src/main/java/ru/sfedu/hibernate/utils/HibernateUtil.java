@@ -55,6 +55,12 @@ public class HibernateUtil {
         metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab3.JoinedTable.model.Author.class);
         metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab3.JoinedTable.model.Employee.class);
         metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab3.JoinedTable.model.People.class);
+
+        metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab4.model.set.PriceParameters.class);
+        metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab4.model.list.PriceParametersList.class);
+        metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab4.model.map.PriceParametersMap.class);
+        metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab4.model.collection.PriceParametersCollection.class);
+        metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab4.model.collection.CoverPrice.class);
     }
 }
 

@@ -29,5 +29,11 @@
         <mapping class="ru.sfedu.hibernate.lab3.TablePerClass.model.Author"/>
         <mapping class="ru.sfedu.hibernate.lab3.TablePerClass.model.People"/>
         <mapping class="ru.sfedu.hibernate.lab3.JoinedTable.model.People"/>
+
+        <mapping class="ru.sfedu.hibernate.lab4.model.set.PriceParameters"/>
+        <mapping class="ru.sfedu.hibernate.lab4.model.list.PriceParametersList"/>
+        <mapping class="ru.sfedu.hibernate.lab4.model.map.PriceParametersMap"/>
+        <mapping class="ru.sfedu.hibernate.lab4.model.collection.PriceParametersCollection"/>
+        <mapping class="ru.sfedu.hibernate.lab4.model.collection.CoverPrice"/>
     </session-factory>
 </hibernate-configuration>

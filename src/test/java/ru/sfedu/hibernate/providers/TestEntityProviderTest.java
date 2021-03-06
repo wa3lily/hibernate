@@ -3,7 +3,6 @@ package ru.sfedu.hibernate.providers;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
-import ru.sfedu.hibernate.Constants;
 import ru.sfedu.hibernate.lab2.model.AnotherTestEntity;
 import ru.sfedu.hibernate.lab2.model.TestEntity;
 import ru.sfedu.hibernate.lab2.providers.TestEntityProvider;
