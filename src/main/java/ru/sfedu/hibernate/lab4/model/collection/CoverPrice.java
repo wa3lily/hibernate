@@ -1,5 +1,6 @@
 package ru.sfedu.hibernate.lab4.model.collection;
 
+import org.hibernate.annotations.Parent;
 import ru.sfedu.hibernate.enums.CoverType;
 
 import javax.persistence.*;

@@ -13,6 +13,7 @@ import ru.sfedu.hibernate.lab4.model.set.PriceParameters;
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class Lab4ProviderTest extends TestBase5 {
 
@@ -97,6 +98,59 @@ class Lab4ProviderTest extends TestBase5 {
         assertEquals(priceParameters, priceParameters1);
         log.debug(instance.delete(PriceParameters.class,resultA));
         PriceParameters priceParameters2 = instance.getById(PriceParameters.class, resultA).orElse(null);
+        assertNull(priceParameters2);
+    }
+
+    @Test
+    public void TestDeleteListSuccess() {
+        log.info("DeleteListSuccess");
+        List<Long> list = new ArrayList<>();
+        list.add(2L);
+        list.add(2L);
+        list.add(4L);
+        PriceParametersList priceParameters = createPriceParametersList( 13.4, list, 16.3, "2019-01-01", "2021-01-01");
+        Long resultA = instance.save(priceParameters);
+        PriceParametersList priceParameters1 = instance.getById(PriceParametersList.class, resultA).get();
+        log.debug(priceParameters1);
+        assertEquals(priceParameters, priceParameters1);
+        log.debug(instance.delete(PriceParametersList.class,resultA));
+        PriceParametersList priceParameters2 = instance.getById(PriceParametersList.class, resultA).orElse(null);
+        assertNull(priceParameters2);
+    }
+
+    @Test
+    public void TestDeleteMapSuccess() {
+        log.info("DeleteMapSuccess");
+        Map<Long, CoverType> map = new HashMap();
+        map.put(2L, CoverType.RIGID_COVER);
+        map.put(2L, CoverType.RIGID_COVER);
+        map.put(4L, CoverType.PAPERBACK);
+        PriceParametersMap priceParameters = createPriceParametersMap( 13.4, map, 16.3, "2019-01-01", "2021-01-01");
+        Long resultA = instance.save(priceParameters);
+        PriceParametersMap priceParameters1 = instance.getById(PriceParametersMap.class, resultA).get();
+        log.debug(priceParameters1);
+        assertEquals(priceParameters, priceParameters1);
+        log.debug(instance.delete(PriceParametersMap.class,resultA));
+        PriceParametersMap priceParameters2 = instance.getById(PriceParametersMap.class, resultA).orElse(null);
+        assertNull(priceParameters2);
+    }
+
+    @Test
+    public void TestDeleteCollectionSuccess() {
+        log.info("DeleteCollectionSuccess");
+        Set<CoverPrice> map = new HashSet<>();
+        CoverPrice coverPrice = createCoverPrice(CoverType.RIGID_COVER, 123.5);
+        CoverPrice coverPrice2 = createCoverPrice(CoverType.PAPERBACK, 143.8);
+        map.add(coverPrice);
+        map.add(coverPrice);
+        map.add(coverPrice2);
+        PriceParametersCollection priceParameters = createPriceParametersCollection( 13.4, map, 16.3, "2019-01-01", "2021-01-01");
+        Long resultA = instance.save(priceParameters);
+        PriceParametersCollection priceParameters1 = instance.getById(PriceParametersCollection.class, resultA).get();
+        log.debug(priceParameters1);
+        assertEquals(priceParameters, priceParameters1);
+        log.debug(instance.delete(PriceParametersCollection.class,resultA));
+        PriceParametersCollection priceParameters2 = instance.getById(PriceParametersCollection.class, resultA).orElse(null);
         assertNull(priceParameters2);
     }
 
