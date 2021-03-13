@@ -79,7 +79,6 @@ public class Lab5Provider {
         }
     }
 
-
     public <T> Boolean update(T entity) {
         Boolean result = false;
         Session session = this.getSession();

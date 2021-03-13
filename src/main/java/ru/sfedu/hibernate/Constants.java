@@ -10,4 +10,9 @@ public class Constants {
     public static final String HQL_READ_FROM = "from %s";
     public static final String HQL_DELETE_FROM = "delete from %s";
     public static final String SQL_SELECT_BY_ID = "select * from %s where id = %d";
+    public static final String TASK_1 ="TASK1";
+    public static final String TASK_2 ="TASK2";
+    public static final String TASK_3 ="TASK3";
+    public static final String TASK_4 ="TASK4";
+    public static final String TASK_5 ="TASK5";
 }
