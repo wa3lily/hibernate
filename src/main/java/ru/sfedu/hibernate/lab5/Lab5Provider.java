@@ -8,6 +8,7 @@ import org.hibernate.Transaction;
 import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
 import ru.sfedu.hibernate.Constants;
+import ru.sfedu.hibernate.lab5.model.many_to_one.Author5;
 import ru.sfedu.hibernate.utils.HibernateUtil;
 
 import javax.persistence.EntityNotFoundException;
@@ -65,18 +66,29 @@ public class Lab5Provider {
     }
 
     //NativeSQL
-    public <T> Optional<T> getByIdNativeSQL(Class<T> classT, long id) {
+    public <T> Optional<Author5> getByIdNativeSQL(Class<T> classT, long id) {
         Session session = getSession();
-        NativeQuery query = session.createSQLQuery(String.format(Constants.SQL_SELECT_BY_ID,"LAB5_MANY2ONE.AUTHOR5",id));
-        List resultList = query.getResultList();
-        session.close();
         try {
-            return Optional.of((T)resultList.get(0));
+            Query query = session.createQuery("select u from Author5 u where u.id=:id", Author5.class).setParameter("id",id);
+            Author5 project = (Author5) query.getSingleResult();
+            log.debug(query);
+            return Optional.of(project);
         } catch (Exception exception) {
             session.close();
             log.error(exception);
             return Optional.empty();
         }
+//        Session session = getSession();
+//        NativeQuery query = session.createSQLQuery(String.format(Constants.SQL_SELECT_BY_ID,"LAB5_MANY2ONE.AUTHOR5",id));
+//        List resultList = query.getResultList();
+//        session.close();
+//        try {
+//            return Optional.of((T)resultList.get(0));
+//        } catch (Exception exception) {
+//            session.close();
+//            log.error(exception);
+//            return Optional.empty();
+//        }
     }
 
     public <T> Boolean update(T entity) {
