@@ -9,4 +9,5 @@ public class Constants {
     public static final String SQL_COLUMN_OF_TABLE = "SELECT COLUMN_NAME FROM information_schema.COLUMNS WHERE TABLE_NAME = '%s'";
     public static final String HQL_READ_FROM = "from %s";
     public static final String HQL_DELETE_FROM = "delete from %s";
+    public static final String SQL_SELECT_BY_ID = "select * from %s where id = %d";
 }

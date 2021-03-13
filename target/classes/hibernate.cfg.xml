@@ -38,5 +38,9 @@
 
         <mapping class="ru.sfedu.hibernate.lab5.model.many_to_one.Author5"/>
         <mapping class="ru.sfedu.hibernate.lab5.model.many_to_one.Book5"/>
+        <mapping class="ru.sfedu.hibernate.lab5.model.many_to_many.CoverPrice5"/>
+        <mapping class="ru.sfedu.hibernate.lab5.model.many_to_many.PriceParameters5"/>
+        <mapping class="ru.sfedu.hibernate.lab5.model.one_to_one.Author6"/>
+        <mapping class="ru.sfedu.hibernate.lab5.model.one_to_one.Book6"/>
     </session-factory>
 </hibernate-configuration>

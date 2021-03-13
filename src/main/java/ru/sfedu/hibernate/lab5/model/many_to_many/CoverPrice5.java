@@ -18,8 +18,7 @@ public class CoverPrice5 implements Serializable {
     private Long id;
     private CoverType coverType;
     private double price;
-    @ManyToMany(cascade = CascadeType.PERSIST)
-    @JoinTable()
+    @ManyToMany(mappedBy = "coverPrice", cascade = {CascadeType.PERSIST, CascadeType.REMOVE })
     protected Set<PriceParameters5> set = new HashSet<>();
 
     public CoverPrice5() {
@@ -62,12 +61,16 @@ public class CoverPrice5 implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         CoverPrice5 that = (CoverPrice5) o;
-        return Double.compare(that.price, price) == 0 && Objects.equals(id, that.id) && coverType == that.coverType && Objects.equals(set, that.set);
+        return Double.compare(that.price, price) == 0
+                && Objects.equals(id, that.id)
+                && coverType == that.coverType
+                && (set==null && that.set == null || set.stream().allMatch(e1 -> that.set.stream().anyMatch(e2 -> e2.getId() == e1.getId())))
+                ;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, coverType, price, set);
+        return Objects.hash(id, coverType, price);
     }
 
     @Override
@@ -76,7 +79,6 @@ public class CoverPrice5 implements Serializable {
                 "id=" + id +
                 ", coverType=" + coverType +
                 ", price=" + price +
-                ", set=" + set +
                 '}';
     }
 }

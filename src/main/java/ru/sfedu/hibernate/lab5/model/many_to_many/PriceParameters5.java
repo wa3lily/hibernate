@@ -38,7 +38,8 @@ public class PriceParameters5 implements Serializable {
         return pagePrice;
     }
 
-    @ManyToMany(mappedBy = "priceparameters")
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST )
+    @JoinTable(schema="lab5_many2many")
     protected Set<CoverPrice5> coverPrice =  new HashSet<>();
 
     public Set<CoverPrice5> getCoverPrice() {
@@ -79,12 +80,19 @@ public class PriceParameters5 implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PriceParameters5 that = (PriceParameters5) o;
-        return Double.compare(that.pagePrice, pagePrice) == 0 && Double.compare(that.workPrice, workPrice) == 0 && Objects.equals(id, that.id) && Objects.equals(validFromDate, that.validFromDate) && Objects.equals(validToDate, that.validToDate) && Objects.equals(coverPrice, that.coverPrice);
+        return Double.compare(that.pagePrice, pagePrice) == 0
+                && Double.compare(that.workPrice, workPrice) == 0
+                && Objects.equals(id, that.id)
+                && Objects.equals(validFromDate, that.validFromDate)
+                && Objects.equals(validToDate, that.validToDate)
+                && (coverPrice == null && that.coverPrice == null || coverPrice.stream().allMatch(e1 -> that.coverPrice.stream().anyMatch(e2 -> e2.getId() == e1.getId())))
+//                && Objects.equals(coverPrice, that.coverPrice)
+                ;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, pagePrice, workPrice, validFromDate, validToDate, coverPrice);
+        return Objects.hash(id, pagePrice, workPrice, validFromDate, validToDate);
     }
 
     @Override
@@ -95,7 +103,7 @@ public class PriceParameters5 implements Serializable {
                 ", workPrice=" + workPrice +
                 ", validFromDate='" + validFromDate + '\'' +
                 ", validToDate='" + validToDate + '\'' +
-                ", coverPrice=" + coverPrice +
+//                ", coverPrice=" + coverPrice +
                 '}';
     }
 }

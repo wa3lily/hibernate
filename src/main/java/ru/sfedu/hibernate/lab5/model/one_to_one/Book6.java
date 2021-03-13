@@ -1,19 +1,21 @@
-package ru.sfedu.hibernate.lab5.model.many_to_one;
+package ru.sfedu.hibernate.lab5.model.one_to_one;
+
+import ru.sfedu.hibernate.lab5.model.one_to_one.Author6;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-@Table(schema="lab5_many2one")
-public class Book5 implements Serializable {
+@Table(schema="lab5_one2one")
+public class Book6 implements Serializable {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "author_id", nullable = false)
-    private Author5 author;
+    @OneToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(unique = true)
+    private Author6 author;
     private String title;
     private int numberOfPages;
 
@@ -25,11 +27,11 @@ public class Book5 implements Serializable {
         this.id = id;
     }
 
-    public Author5 getAuthor() {
+    public Author6 getAuthor() {
         return author;
     }
 
-    public void setAuthor(Author5 author) {
+    public void setAuthor(Author6 author) {
         this.author = author;
     }
 
@@ -53,13 +55,16 @@ public class Book5 implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Book5 book5 = (Book5) o;
-        return id == book5.id && numberOfPages == book5.numberOfPages && (author == null & book5.author == null || author.getId() == book5.author.getId() ) && Objects.equals(title, book5.title);
+        Book6 book6 = (Book6) o;
+        return id == book6.id && numberOfPages == book6.numberOfPages
+                && (author==null && book6.author==null || author.getId()==book6.author.getId())
+//                && Objects.equals(author, book6.author)
+                && Objects.equals(title, book6.title);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, author, title, numberOfPages);
+        return Objects.hash(id, title, numberOfPages);
     }
 
     @Override
