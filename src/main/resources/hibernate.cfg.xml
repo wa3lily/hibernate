@@ -42,5 +42,15 @@
         <mapping class="ru.sfedu.hibernate.lab5.model.many_to_many.PriceParameters5"/>
         <mapping class="ru.sfedu.hibernate.lab5.model.one_to_one.Author6"/>
         <mapping class="ru.sfedu.hibernate.lab5.model.one_to_one.Book6"/>
+
+        <mapping class="ru.sfedu.hibernate.lab5.model.People7"/>
+        <mapping class="ru.sfedu.hibernate.lab5.model.Employee7"/>
+        <mapping class="ru.sfedu.hibernate.lab5.model.Author7"/>
+        <mapping class="ru.sfedu.hibernate.lab5.model.Book7"/>
+        <mapping class="ru.sfedu.hibernate.lab5.model.Order7"/>
+        <mapping class="ru.sfedu.hibernate.lab5.model.PriceParameters7"/>
+        <mapping class="ru.sfedu.hibernate.lab5.model.CoverPrice7"/>
+        <mapping class="ru.sfedu.hibernate.lab5.model.Corrections7"/>
+        <mapping class="ru.sfedu.hibernate.lab5.model.Meeting7"/>
     </session-factory>
 </hibernate-configuration>

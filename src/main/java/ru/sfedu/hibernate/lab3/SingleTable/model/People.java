@@ -11,7 +11,7 @@ import java.util.Objects;
 @Entity(name = "People3")
 @Table(schema="lab3_single_table")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorValue( "null" )
+@DiscriminatorValue( "People" )
 public class People implements Serializable {
 
   @Id

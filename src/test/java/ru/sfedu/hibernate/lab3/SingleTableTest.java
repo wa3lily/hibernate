@@ -22,8 +22,10 @@ class SingleTableTest extends TestBase3 {
         log.info("saveSuccess");
         Author author = createAuthor("Виктор","Иванович","Ткач","83456789012", "tkach@gmail.com", "docent", "Donstu");
         Long resultA = instance.save(author);
+        People people  = createPeople("Виктор","Иванович","Ткач","83456789012");
         Employee employee = createEmployee("Иван","Иванович","Иванов","81234567890", "123456789012","1234567", EmployeeType.CHIEF);
         Long resultE = instance.save(employee);
+        instance.save(people);
         Author author1 = instance.getById(Author.class, resultA).get();
         Employee employee1 = instance.getById(Employee.class, resultE).get();
         log.debug(author1);

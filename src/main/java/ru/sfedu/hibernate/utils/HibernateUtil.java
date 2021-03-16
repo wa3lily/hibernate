@@ -68,6 +68,16 @@ public class HibernateUtil {
         metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab5.model.many_to_many.PriceParameters5.class);
         metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab5.model.one_to_one.Author6.class);
         metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab5.model.one_to_one.Book6.class);
+
+        metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab5.model.People7.class);
+        metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab5.model.Employee7.class);
+        metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab5.model.Author7.class);
+        metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab5.model.Book7.class);
+        metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab5.model.Order7.class);
+        metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab5.model.PriceParameters7.class);
+        metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab5.model.CoverPrice7.class);
+        metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab5.model.Corrections7.class);
+        metadataSources.addAnnotatedClass(ru.sfedu.hibernate.lab5.model.Meeting7.class);
     }
 }
 

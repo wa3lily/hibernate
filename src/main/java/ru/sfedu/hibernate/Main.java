@@ -1,6 +1,8 @@
 package ru.sfedu.hibernate;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import ru.sfedu.hibernate.enums.BookStatus;
+import ru.sfedu.hibernate.enums.CorrectionsStatus;
 import ru.sfedu.hibernate.enums.CoverType;
 import ru.sfedu.hibernate.enums.EmployeeType;
 import ru.sfedu.hibernate.lab2.model.TestEntity;
@@ -16,6 +18,7 @@ import ru.sfedu.hibernate.lab4.model.list.PriceParametersList;
 import ru.sfedu.hibernate.lab4.model.map.PriceParametersMap;
 import ru.sfedu.hibernate.lab4.model.set.PriceParameters;
 import ru.sfedu.hibernate.lab5.Lab5Provider;
+import ru.sfedu.hibernate.lab5.model.*;
 import ru.sfedu.hibernate.lab5.model.many_to_one.Author5;
 import ru.sfedu.hibernate.lab5.model.many_to_one.Book5;
 import ru.sfedu.hibernate.providers.HibernateMetadataProvider;
@@ -200,33 +203,166 @@ public class Main {
     public static String task5 (String[] s){
         try {
             Lab5Provider provider = new Lab5Provider();
-            Author5 author = createAuthor5("Виктор","Иванович","Ткач","83456789012", "tkach@gmail.com", "docent", "Donstu");
-            Book5 book = createBook5(author,"Цифровая бухгалтерия",400);
+            Author7 author = createAuthor7("Виктор","Иванович","Ткач","83456789012", "tkach@gmail.com", "docent", "Donstu");
+            Book7 book = createBook7(author,"Цифровая бухгалтерия",400);
             provider.save(author);
             provider.save(book);
             switch (s[1]) {
                 case "criteria":
                     long start = System.currentTimeMillis();
-                    System.out.println(provider.getByIdCriteria(Author5.class,Long.parseLong(s[2])).toString());
+                    System.out.println(provider.getByIdCriteria(Author7.class,Long.parseLong(s[2])).toString());
                     Thread.sleep(1000);
                     long finish = System.currentTimeMillis();
                     long elapsed = finish - start;
                     return " "+elapsed;
                 case "hql":
                     long start1 = System.currentTimeMillis();
-                    System.out.println(provider.getById(Author5.class,Long.parseLong(s[2])).toString());
+                    System.out.println(provider.getById(Author7.class,Long.parseLong(s[2])).toString());
                     Thread.sleep(1000);
                     long finish1 = System.currentTimeMillis();
                     long elapsed1 = finish1 - start1;
                     return " "+elapsed1;
                 case "sql":
                     long start2 = System.currentTimeMillis();
-                    System.out.println(provider.getByIdNativeSQL(Author5.class,Long.parseLong(s[2])).toString());
+                    System.out.println(provider.getByIdNativeSQL(Author7.class,Long.parseLong(s[2])).toString());
                     Thread.sleep(1000);
                     long finish2 = System.currentTimeMillis();
                     long elapsed2 = finish2 - start2;
                     return " "+elapsed2;
+                case "many2one":
+                    Author7 author7 = createAuthor7("Виктор","Иванович","Ткач","83456789012", "tkach@gmail.com", "docent", "Donstu");
+                    Book7 book7 = createBook7(author7,"Цифровая бухгалтерия",400);
+                    Long resultA = provider.save(author7);
+                    Long resultB = provider.save(book7);
+                    switch (s[2]){
+                        case "save":
+                            Author7 author8 = createAuthor7(s[3],s[4],s[5],s[6], s[7], s[8], s[9]);
+                            Long res = provider.save(author8);
+                            return provider.getById(Author7.class,res).toString();
+                        case "delete":
+                            switch (s[3]){
+                                case "author":
+                                    provider.delete(Author7.class,Long.parseLong(s[4]));
+                                    return provider.getById(Author7.class,Long.parseLong(s[4])).toString();
+                                case "book":
+                                    provider.delete(Book7.class,Long.parseLong(s[4]));
+                                    return provider.getById(Book7.class,Long.parseLong(s[4])).toString();
+                            }
+                        case "update":
+                            switch (s[3]){
+                                case "author":
+                                    Author7 author7u = provider.getById(Author7.class,resultA).orElse(null);
+                                    author7u.setFirstName(s[4]);
+                                    provider.update(author7u);
+                                    return provider.getById(Author7.class,resultA).toString();
+                                case "book":
+                                    Book7 book7u = provider.getById(Book7.class,resultB).orElse(null);
+                                    book7u.setTitle(s[4]);
+                                    provider.update(book7u);
+                                    return provider.getById(Book7.class,resultB).toString();
+                            }
+                        case "get":
+                            switch (s[3]){
+                                case "author":
+                                    return provider.getById(Author7.class,Long.parseLong(s[4])).toString();
+                                case "book":
+                                    return provider.getById(Book7.class,Long.parseLong(s[4])).toString();
+                            }
+                    }
+                case "many2many":
+                    Set<CoverPrice7> set = new HashSet<>();
+                    CoverPrice7 coverPrice = createCoverPrice7(CoverType.RIGID_COVER, 123.5);
+                    CoverPrice7 coverPrice2 = createCoverPrice7(CoverType.PAPERBACK, 143.8);
+                    Long result1 = provider.save(coverPrice);
+                    Long result2 = provider.save(coverPrice2);
+                    set.add(coverPrice);
+                    set.add(coverPrice2);
+                    PriceParameters7 priceParameters = createPriceParameters7( 13.4, set, 16.3, "2019-01-01", "2021-01-01");
+                    Long resultAm2m = provider.save(priceParameters);
+                    switch (s[2]){
+                        case "delete":
+                            switch (s[3]){
+                                case "coverPrice":
+                                    provider.delete(CoverPrice7.class, Long.parseLong(s[4]));
+                                    return provider.getById(CoverPrice7.class, Long.parseLong(s[4])).toString();
+                                case "priceParameters":
+                                    provider.delete(PriceParameters7.class, Long.parseLong(s[4]));
+                                    return provider.getById(PriceParameters7.class, Long.parseLong(s[4])).toString();
+                            }
+                        case "update":
+                            switch (s[3]){
+                                case "coverPrice":
+                                    CoverPrice7 coverPriceU = provider.getById(CoverPrice7.class, result1).orElse(null);
+                                    coverPriceU.setPrice(Double.parseDouble(s[4]));
+                                    provider.update(coverPriceU);
+                                    return provider.getById(CoverPrice7.class, result1).toString();
+                                case "priceParameters":
+                                    PriceParameters7 priceParametersU = provider.getById(PriceParameters7.class, resultAm2m).orElse(null);
+                                    priceParametersU.setPagePrice(Double.parseDouble(s[4]));
+                                    provider.update(priceParametersU);
+                                    return provider.getById(PriceParameters7.class, resultAm2m).toString();
+                            }
+                        case "get":
+                            switch (s[3]){
+                                case "coverPrice":
+                                    return provider.getById(CoverPrice7.class, Long.parseLong(s[4])).toString();
+                                case "priceParameters":
+                                    return provider.getById(PriceParameters7.class, Long.parseLong(s[4])).toString();
+                            }
+                    }
+                case "one2one":
+                    Meeting7 meetingo2o = createMeeting7("2020-12-15 11:55",true, false);
+                    Author7 authoro2o = createAuthor7("Виктор","Иванович","Ткач","83456789012", "tkach@gmail.com", "docent", "Donstu");
+                    Order7 ordero2o = createOrder7(author,"Цифровая бухгалтерия",4,"2020-09-03", CoverType.RIGID_COVER, null, null, null, 229, 100, 9700.75 , BookStatus.EDITING  );
+                    Corrections7 corrections = corrections = createCorrections7(35, "Цифровой контроль - это компьютерные системы",
+                            "Цифровой контроль представляет собой компьютерные системы", "Повторяется конструкция", ordero2o, meetingo2o, CorrectionsStatus.WAIT_AUTHOR_AGR );
 
+                    Long resultM = provider.save(meetingo2o);
+                    provider.save(authoro2o);
+                    provider.save(ordero2o);
+                    Long resultC = provider.save(corrections);
+                    switch (s[2]){
+                        case "save":
+                            switch (s[3]){
+                                case "meet":
+                                    Meeting7 meetings = createMeeting7(s[4],Boolean.parseBoolean(s[4]),  Boolean.parseBoolean(s[4]));
+                                    Long resMS = provider.save(meetings);
+                                    return provider.getById(Meeting7.class, resMS).toString();
+                                case "cor":
+                                    Corrections7 correctionsS = createCorrections7(Integer.parseInt(s[4]), s[5], s[6], s[7], ordero2o, meetingo2o, CorrectionsStatus.WAIT_AUTHOR_AGR );
+                                    Long resMC = provider.save(correctionsS);
+                                    return provider.getById(Corrections7.class, resMC).toString();
+                            }
+                        case "delete":
+                            switch (s[3]){
+                                case "meet":
+                                    provider.delete(Meeting7.class, Long.parseLong(s[4]));
+                                    return provider.getById(Meeting7.class, Long.parseLong(s[4])).toString();
+                                case "cor":
+                                    provider.delete(Corrections7.class, Long.parseLong(s[4]));
+                                    return provider.getById(Corrections7.class, Long.parseLong(s[4])).toString();
+                            }
+                        case "update":
+                            switch (s[3]){
+                                case "meet":
+                                    Meeting7 meetingU = provider.getById(Meeting7.class, resultM).orElse(null);
+                                    meetingU.setEditorAgreement(Boolean.parseBoolean(s[4]));
+                                    provider.update(meetingU);
+                                    return provider.getById(Meeting7.class, resultM).toString();
+                                case "cor":
+                                    Corrections7 correctionsU = provider.getById(Corrections7.class, resultC).orElse(null);
+                                    correctionsU.setComment("AnotherComment");
+                                    provider.update(correctionsU);
+                                    return provider.getById(Corrections7.class, resultC).toString();
+                            }
+                        case "get":
+                            switch (s[3]){
+                                case "meet":
+                                    return provider.getById(Meeting7.class, Long.parseLong(s[4])).toString();
+                                case "cor":
+                                    return provider.getById(Corrections7.class, Long.parseLong(s[4])).toString();
+                            }
+                    }
             }
         }catch(Exception e){
             log.error(e);
@@ -323,5 +459,102 @@ public class Main {
         book.setTitle(title);
         book.setNumberOfPages(numberOfPages);
         return book;
+    }
+
+    public static Author7 createAuthor7 (String firstName, String secondName, String lastName, String phone, String email, String degree, String organization){
+        Author7 author = new Author7();
+        author.setFirstName(firstName);
+        author.setSecondName(secondName);
+        author.setLastName(lastName);
+        author.setPhone(phone);
+        author.setEmail(email);
+        author.setDegree(degree);
+        author.setOrganization(organization);
+        return author;
+    }
+
+    public static Book7 createBook7 (Author7 author, String title, int numberOfPages){
+        Book7 book = new Book7();
+        book.setAuthor(author);
+        book.setTitle(title);
+        book.setNumberOfPages(numberOfPages);
+        return book;
+    }
+
+    public static PriceParameters7 createPriceParameters7(double pagePrice, Set<CoverPrice7> set, double workPrice, String validFromDate, String validToDate){
+        PriceParameters7 priceParameters = new PriceParameters7();
+        priceParameters.setPagePrice(pagePrice);
+        priceParameters.setCoverPrice(set);
+        priceParameters.setWorkPrice(workPrice);
+        priceParameters.setValidFromDate(validFromDate);
+        priceParameters.setValidToDate(validToDate);
+        return priceParameters;
+    }
+
+    public static CoverPrice7 createCoverPrice7(CoverType coverType, double price){
+        CoverPrice7 coverPrice = new CoverPrice7();
+        coverPrice.setCoverType(coverType);
+        coverPrice.setPrice(price);
+        return coverPrice;
+    }
+
+    public static Corrections7 createCorrections7 (int page, String textBefore, String textAfter, String comment, Order7 order, Meeting7 meet, CorrectionsStatus status){
+        Corrections7 correction = new Corrections7();
+        correction.setPage(page);
+        correction.setTextBefore(textBefore);
+        correction.setTextAfter(textAfter);
+        correction.setComment(comment);
+        correction.setOrder(order);
+        correction.setMeet(meet);
+        correction.setStatus(status);
+        return correction;
+    }
+
+    public static Meeting7 createMeeting7 (String meetDate, boolean authorAgreement, boolean editorAgreement){
+        Meeting7 meeting = new Meeting7();
+        meeting.setMeetDate(meetDate);
+        meeting.setAuthorAgreement(authorAgreement);
+        meeting.setEditorAgreement(editorAgreement);
+        return meeting;
+    }
+
+    public static Order7 createOrder7 (Author7 author, String title, int numberOfPages, String orderDate,
+                               CoverType coverType, Employee7 bookMaker, Employee7 bookEditor, PriceParameters7 bookPriceParameters,
+                               int finalNumberOfPages, int numberOfCopies, double price, BookStatus bookStatus){
+        Order7 order = new Order7();
+        order.setAuthor(author);
+        order.setTitle(title);
+        order.setNumberOfPages(numberOfPages);
+        order.setOrderDate(orderDate);
+        order.setCoverType(coverType);
+        order.setBookMaker(bookMaker);
+        order.setBookEditor(bookEditor);
+        order.setBookPriceParameters(bookPriceParameters);
+        order.setFinalNumberOfPages(finalNumberOfPages);
+        order.setNumberOfCopies(numberOfCopies);
+        order.setPrice(price);
+        order.setBookStatus(bookStatus);
+        return order;
+    }
+
+    public static People7 createPeople7 (String firstName, String secondName, String lastName, String phone){
+        People7 people = new People7();
+        people.setFirstName(firstName);
+        people.setSecondName(secondName);
+        people.setLastName(lastName);
+        people.setPhone(phone);
+        return people;
+    }
+
+    public static Employee7 createEmployee7 (String firstName, String secondName, String lastName, String phone, String inn, String workRecordBook, EmployeeType emplpyeeType){
+        Employee7 employee = new Employee7();
+        employee.setFirstName(firstName);
+        employee.setSecondName(secondName);
+        employee.setLastName(lastName);
+        employee.setPhone(phone);
+        employee.setInn(inn);
+        employee.setWorkRecordBook(workRecordBook);
+        employee.setEmplpyeeType(emplpyeeType);
+        return employee;
     }
 }

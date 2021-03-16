@@ -1,21 +1,26 @@
-package ru.sfedu.hibernate.lab5.model.many_to_one;
+package ru.sfedu.hibernate.lab5.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
-@Entity
-@Table(schema="lab5_many2one")
-public class Book5 implements Serializable {
+@Entity()
+@Table()
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorValue( "Book" )
+public class Book7 implements Serializable {
+
     @Id
-    @Column
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     long id;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "author_id", nullable = false)
-    private Author5 author;
+    private Author7 author;
     private String title;
     private int numberOfPages;
+
+    public Book7() {
+    }
 
     public long getId() {
         return id;
@@ -25,11 +30,11 @@ public class Book5 implements Serializable {
         this.id = id;
     }
 
-    public Author5 getAuthor() {
+    public Author7 getAuthor() {
         return author;
     }
 
-    public void setAuthor(Author5 author) {
+    public void setAuthor(Author7 author) {
         this.author = author;
     }
 
@@ -53,22 +58,20 @@ public class Book5 implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Book5 book5 = (Book5) o;
-        return id == book5.id
-                && numberOfPages == book5.numberOfPages
-                && (author == null & book5.author == null || author.getId() == book5.author.getId() )
-                && Objects.equals(title, book5.title)
-                ;
+        Book7 book7 = (Book7) o;
+        return id == book7.id && numberOfPages == book7.numberOfPages
+                && (author == null & book7.author == null || author.getId() == book7.author.getId() )
+                && Objects.equals(title, book7.title);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, author, title, numberOfPages);
+        return Objects.hash(id, author.getId(), title, numberOfPages);
     }
 
     @Override
     public String toString() {
-        String res = "Book5{" +
+        String res = "Book7{" +
                 "id=" + id ;
         try{
             res += ", author=" + author.getId();
